@@ -7,9 +7,9 @@ This repository contains the code for the user interface of application. This RE
 ## Table of Contents
 
 1.  <a href="#getting-started">Getting Started</a>
-  - <a href="#prerequisites">Prerequisites</a>
-  - <a href="#installation">Installation</a>
-  - <a href="#running-the-application">Running the Application</a>
+    - <a href="#prerequisites">Prerequisites</a>
+    - <a href="#installation">Installation</a>
+    - <a href="#running-the-application">Running the Application</a>
 2. Project Structure (in Progress)
 
 ## Getting Started
