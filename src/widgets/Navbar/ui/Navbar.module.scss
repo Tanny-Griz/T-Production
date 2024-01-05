@@ -1,0 +1,15 @@
+.navbar {
+  position: sticky;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 18px;
+  top: 0;
+  width: 100%;
+  min-height: var(--navbar-heigh);
+  background-color: var(--inverted-bg-color);
+}
+
+.links a {
+  margin: 0 10px;
+}
