@@ -4,6 +4,9 @@ import { useTheme } from './providers/ThemeProvider';
 import { AppRouter } from './providers/router';
 import { Navbar } from 'widgets/Navbar';
 import { Sidebar } from 'widgets/Sidebar';
+import { Suspense } from 'react';
+
+import 'shared/config/i18n/i18n';
 
 const App = () => {
   const { theme } = useTheme();
@@ -11,11 +14,13 @@ const App = () => {
 
   return (
     <div className={classNames('app', {}, [theme])}>
-      <Navbar />
-      <div className='content'>
-        <Sidebar />
-        <AppRouter/>
-      </div>
+      <Suspense fallback=''>
+        <Navbar />
+        <div className='content'>
+          <Sidebar />
+          <AppRouter/> 
+        </div>
+      </Suspense>
     </div>
   )
 }
