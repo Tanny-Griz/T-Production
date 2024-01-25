@@ -6,6 +6,7 @@ export function buildDevServer(options: BuildOptions): DevServerConfiguration {
     port: options.port,
     open: true,
     // when page reload path do not crash
-    historyApiFallback: true
+    historyApiFallback: true,
+    hot: true,
   }
 }
