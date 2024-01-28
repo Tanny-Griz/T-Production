@@ -1,22 +1,22 @@
-import webpack from 'webpack';
-import HTMLWebpackPlugin from 'html-webpack-plugin';
-import { BuildOptions } from './types/config';
+import webpack from 'webpack'
+import HTMLWebpackPlugin from 'html-webpack-plugin'
+import { BuildOptions } from './types/config'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 
 export function buildPlugins({paths, isDev}: BuildOptions): webpack.WebpackPluginInstance[] {
-  return [
-    new HTMLWebpackPlugin({
-      template: paths.html, // to create our template and not an empty one
-    }),
-    new webpack.ProgressPlugin(),
-    new webpack.SourceMapDevToolPlugin({}),
-    new MiniCssExtractPlugin({
-      filename: 'css/[name].[contenthash:8].css',
-      chunkFilename: 'css/[name].[contenthash:8].css'
-    }),
-    new webpack.DefinePlugin({
-      __IS_DEV__: JSON.stringify(isDev),
-    }),
-    new webpack.HotModuleReplacementPlugin(),
-  ]
+	return [
+		new HTMLWebpackPlugin({
+			template: paths.html, // to create our template and not an empty one
+		}),
+		new webpack.ProgressPlugin(),
+		new webpack.SourceMapDevToolPlugin({}), // NB!
+		new MiniCssExtractPlugin({
+			filename: 'css/[name].[contenthash:8].css',
+			chunkFilename: 'css/[name].[contenthash:8].css'
+		}),
+		new webpack.DefinePlugin({
+			__IS_DEV__: JSON.stringify(isDev),
+		}),
+		new webpack.HotModuleReplacementPlugin(),
+	]
 }

@@ -1,4 +1,4 @@
-export function someF(arg: number): string {
-  console.log('test');
-  return ''
+export function someF(): string {
+	console.log('test')
+	return ''
 }
