@@ -3,7 +3,8 @@ module.exports = {
 		'browser': true,
 		'es2021': true,
 		'amd': true,
-		'node': true
+		'node': true,
+		'jest': true
 	},
 	'extends': [
 		'eslint:recommended',
@@ -33,7 +34,10 @@ module.exports = {
 		'semi': ['error', 'never'],
 		'react/react-in-jsx-scope': 'off',
 		'@typescript-eslint/no-explicit-any': 'warn',
-		'i18next/no-literal-string': ['error', {markupOnly: true}],
+		'i18next/no-literal-string': [
+			'error',
+			{ markupOnly: true, onlyAttribute: true },
+		],
 		'no-multiple-empty-lines':['error', { max:1 }],
 	},
 	globals: {
