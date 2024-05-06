@@ -8,7 +8,8 @@ module.exports = {
 	'extends': [
 		'eslint:recommended',
 		'plugin:react/recommended',
-		'plugin:@typescript-eslint/recommended'
+		'plugin:@typescript-eslint/recommended',
+		'plugin:i18next/recommended',
 	],
 	'overrides': [
 	],
@@ -19,7 +20,8 @@ module.exports = {
 	},
 	'plugins': [
 		'react',
-		'@typescript-eslint'
+		'@typescript-eslint',
+		'i18next',
 	],
 	'rules': {
 		'react/jsx-indent': [2, 'tab'],
@@ -30,7 +32,9 @@ module.exports = {
 		'quotes': ['error', 'single'],
 		'semi': ['error', 'never'],
 		'react/react-in-jsx-scope': 'off',
-		'@typescript-eslint/no-explicit-any': 'warn'
+		'@typescript-eslint/no-explicit-any': 'warn',
+		'i18next/no-literal-string': ['error', {markupOnly: true}],
+		'no-multiple-empty-lines':['error', { max:1 }],
 	},
 	globals: {
 		'__IS_DEV': true

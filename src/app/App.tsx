@@ -17,7 +17,7 @@ const App = () => {
 				<Navbar />
 				<div className='content'>
 					<Sidebar />
-					<AppRouter/> 
+					<AppRouter/>
 				</div>
 			</Suspense>
 		</div>
